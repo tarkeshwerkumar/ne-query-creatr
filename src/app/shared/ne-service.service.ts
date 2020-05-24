@@ -25,15 +25,15 @@ export class NeServiceService {
         obj.domain = obj.domain.toUpperCase();
         obj.vendor = obj.vendor.toUpperCase();
         obj.netype = obj.netype.toUpperCase();
-        var q = `('${obj.domain}', '${obj.neid}, ${obj.nename}', '${
+        var q = `('${obj.domain}', '${obj.neid}', '${obj.nename}', '${
           obj.fmemsid
-        }', '${obj.netype}', '${obj.ipv6 ? obj.ipv6 : "NULL"}', '${
-          obj.ipv4 ? obj.ipv4 : "NULL"
-        }', '${obj.latitude ? obj.latitude : "NULL"}', '${
-          obj.longitude ? obj.longitude : "NULL"
-        }', ${obj.geographyl1id_fk ? obj.geographyl1id_fk : "NULL"}, ${
-          obj.geographyl2id_fk ? obj.geographyl3id_fk : "NULL"
-        }, ${obj.geographyl3id_fk ? obj.geographyl3id_fk : "NULL"}, '${
+        }', '${obj.netype}', '${obj.ipv6 ? obj.ipv6 : 'NULL'}', '${
+          obj.ipv4 ? obj.ipv4 : 'NULL'
+        }', '${obj.latitude ? obj.latitude : 'NULL'}', '${
+          obj.longitude ? obj.longitude : 'NULL'
+        }', ${obj.geographyl1id_fk ? obj.geographyl1id_fk : 'NULL'}, ${
+          obj.geographyl2id_fk ? obj.geographyl3id_fk : 'NULL'
+        }, ${obj.geographyl3id_fk ? obj.geographyl3id_fk : 'NULL'}, '${
           obj.vendor
         }', 0),\n`;
         query = query + q;
@@ -56,8 +56,16 @@ export class NeServiceService {
     return true;
   }
   modifyQuery(q: string) {
-    var qer = q.replace(`'NULL'`, "NULL");
+    var qer = this.replaceNull(q);
     qer = qer.slice(0, -2) + ";";
     this.queryToRetun = qer;
   }
+
+  replaceNull(value: string): string{
+    while(value.includes(`'NULL'`)){
+      value = value.replace(`'NULL'`, 'NULL');
+    }
+    return value;
+  }
+
 }
