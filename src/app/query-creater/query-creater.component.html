@@ -1,0 +1,39 @@
+<section class="query-section">
+  <mat-toolbar class="query-head">
+    <span>
+      Upload File And Create Query
+    </span>
+  </mat-toolbar>
+
+  <div class="files">
+    <div>
+      <input type="file" class="file-input" id="file-input" multiple="false" #fileInput
+      (change)="uploadFile($event)"
+      />
+    </div>
+    <br>
+    <div *ngIf="fileName !== ''">
+      <p style="color: green;">  {{ fileName }} is Uploaded </p>
+    </div>
+    <div *ngIf="isInvalidFile">
+      <p style="color: red;">Plz select a valid file, Only xlsx file support !</p>
+    </div>
+    <button mat-raised-button color="primary"
+    (click)="generateQuery()"
+    [disabled]="fileName == ''"
+    >Download Query</button>
+  </div>
+  <div class="guide">
+    <ul>
+      <li>
+        <p>Column 'deleted' will be added in the query with value 0</p>
+      </li>
+      <li>
+        <p>Column with empty value will set as 'NULL' in the query</p>
+      </li>
+    </ul>
+    <!-- <p class="note">
+      <strong>Note :- </strong> Plz Dont't be Tester , Use it as a developer , Development is in Progress.
+    </p> -->
+  </div>
+</section>

@@ -1,0 +1,63 @@
+.query-section {
+  /* text-align: center; */
+}
+.query-head {
+  min-height: 40px;
+  max-height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: rosybrown;
+  color: white;
+  margin-bottom: 20px;
+}
+.files {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.file-input {
+  border: 1px solid green;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.file-input:focus {
+  outline: none;
+}
+.download-btn {
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  color: white;
+  background-color: #04e762;
+  height: 36px;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.download-btn:hover {
+  opacity: 0.5;
+}
+.after-upload {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 500px;
+}
+.guide{
+  margin-top: 10px;
+}
+.guide li{
+  font-size: 12px;
+}
+
+.note{
+  text-align: center;
+}
+.note strong{
+  color: tomato;
+}

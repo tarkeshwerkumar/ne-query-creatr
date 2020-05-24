@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/ne-query-creator",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
