@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
+## Live Running 
+
+[Click Here](https://ne-query-maker.web.app)
+
 ## Development server
 
 Close project then `cd ne-query-creator` And Run `npm install`
