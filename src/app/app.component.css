@@ -63,3 +63,12 @@ a{
   text-decoration: none;
   padding: 10px;
 }
+.guide-section{
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 300px;
+  text-align: center;
+}
+.guide-section img{
+  width: 30px;
+}

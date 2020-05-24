@@ -1,23 +1,38 @@
-  <mat-toolbar class="header">
-    <span>
-      <h2 style="color: white;">NE-Query-Creater</h2>
-    </span>
-  </mat-toolbar>
+<mat-toolbar class="header">
+  <span>
+    <h2 style="color: white;">NE-Query-Creater</h2>
+  </span>
+</mat-toolbar>
 
-  <section class="template">
-    <a href="assets/neQueryTemplate.xlsx"
+<section class="template">
+  <a
+    href="assets/neQueryTemplate.xlsx"
     download="ne-template.xlsx"
     class="download-btn"
     target="_blank"
-    >Download Template</a>
-  </section>
+    >Download Template</a
+  >
+</section>
 
-  <section class="container">
-        <app-query-creater></app-query-creater>
-  </section>
-
-  <mat-toolbar class="footer">
-    <span>
-       <p>Design And Developed By a {{ '{ Bandhua Majdoor }' }}</p>
-    </span>
-  </mat-toolbar>
+<section class="container">
+  <app-query-creater></app-query-creater>
+</section>
+<section class="guide-section">
+  <div>
+    <a
+      href="https://github.com/tarkeshwerkumar/ne-query-creator"
+      mat-raised-button color="accent"
+      target="blank"
+    >
+      <img src="assets/github-logo.png" alt="Github" />
+      <h2>
+        Source code
+      </h2>
+    </a>
+  </div>
+</section>
+<mat-toolbar class="footer">
+  <span>
+    <p>Design And Developed By a {{ "{ Bandhua Majdoor }" }}</p>
+  </span>
+</mat-toolbar>
