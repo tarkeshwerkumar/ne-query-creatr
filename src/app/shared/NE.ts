@@ -12,4 +12,5 @@ export interface NetworkElement{
   geographyl1id_fk?: number;
   geographyl2id_fk?: number;
   geographyl3id_fk?: number;
+  isvirtual?: number;
 }

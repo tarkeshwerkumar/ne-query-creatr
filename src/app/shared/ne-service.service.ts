@@ -19,7 +19,7 @@ export class NeServiceService {
 
   generateQuery(data: NetworkElement[]) {
     var query: string =
-      "INSERT INTO NetworkElement(domain,neid,nename,fmemsid,netype,ipv6,ipv4,latitude,longitude,geographyl1id_fk,geographyl2id_fk,geographyl3id_fk,vendor, deleted) values\n";
+      "INSERT INTO NetworkElement(domain,neid,nename,fmemsid,netype,ipv6,ipv4,latitude,longitude,geographyl1id_fk,geographyl2id_fk,geographyl3id_fk,vendor,isvirtual,deleted) values\n";
     data.forEach((obj) => {
       if (this.validateData(obj)) {
         obj.domain = obj.domain.toUpperCase();
@@ -35,7 +35,7 @@ export class NeServiceService {
           obj.geographyl2id_fk ? obj.geographyl3id_fk : 'NULL'
         }, ${obj.geographyl3id_fk ? obj.geographyl3id_fk : 'NULL'}, '${
           obj.vendor
-        }', 0),\n`;
+        }',${obj.isvirtual ? obj.isvirtual : 'NULL'}, 0),\n`;
         query = query + q;
       }
     });
