@@ -32,7 +32,7 @@ export class NeServiceService {
         }', '${obj.latitude ? obj.latitude : 'NULL'}', '${
           obj.longitude ? obj.longitude : 'NULL'
         }', ${obj.geographyl1id_fk ? obj.geographyl1id_fk : 'NULL'}, ${
-          obj.geographyl2id_fk ? obj.geographyl3id_fk : 'NULL'
+          obj.geographyl2id_fk ? obj.geographyl2id_fk : 'NULL'
         }, ${obj.geographyl3id_fk ? obj.geographyl3id_fk : 'NULL'}, '${
           obj.vendor
         }',${obj.isvirtual ? obj.isvirtual : 'NULL'}, 0),\n`;
